@@ -1,0 +1,21 @@
+# data source
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:produto-consulta
+    username: sa
+    password:
+  jpa:
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.show_sql: false
+      hibernate.format_sql: true
